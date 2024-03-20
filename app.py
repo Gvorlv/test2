@@ -1,6 +1,10 @@
 """Точка входа в приложение."""
 
+<<<<<<< HEAD
 from datetime import datetime, timezone
+=======
+from datetime import datetime
+>>>>>>> 4ff00fa (test2)
 
 from fastapi import (
     FastAPI,
@@ -15,6 +19,7 @@ app = FastAPI()
 
 @app.get("/")
 def get(r: Request) -> Response:
+<<<<<<< HEAD
     """_summary_.
 
     Args:
@@ -26,6 +31,9 @@ def get(r: Request) -> Response:
         Response: _description_
 
     """
+=======
+    """Функция получения задач по приоритету."""
+>>>>>>> 4ff00fa (test2)
     priority = r.query_params.get("priority")
     data = read_tasks()
     if priority:
@@ -35,7 +43,11 @@ def get(r: Request) -> Response:
 
 @app.post("/")
 async def post(r: Request) -> Response:
+<<<<<<< HEAD
     """_summary_.
+=======
+    """Описание.
+>>>>>>> 4ff00fa (test2)
 
     Args:
     ----
@@ -52,6 +64,10 @@ async def post(r: Request) -> Response:
         for item in ("title", "description", "priority")
         if not data.get(item)
     ]
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4ff00fa (test2)
     if not isinstance(data.get("priority"), int):  # и тут
         errors.append("Поле priority должно быть числом")
     if errors:
@@ -60,7 +76,11 @@ async def post(r: Request) -> Response:
         "title": data.get("title"),
         "description": data.get("description"),
         "priority": int(data.get("priority")),
+<<<<<<< HEAD
         "date": datetime.now(tz=timezone.utc).strftime("%Y.%m.%d %H:%M"),
+=======
+        "date": datetime.now(datetime.timezone.utc).strftime("%Y.%m.%d %H:%M"),
+>>>>>>> 4ff00fa (test2)
     }
     tasks = read_tasks()
     tasks.append(task)
@@ -70,7 +90,11 @@ async def post(r: Request) -> Response:
 
 @app.delete("/")
 def delete(r: Request) -> Response:
+<<<<<<< HEAD
     """safdsaf.
+=======
+    """_summary_.
+>>>>>>> 4ff00fa (test2)
 
     Args:
     ----

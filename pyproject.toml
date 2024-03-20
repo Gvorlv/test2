@@ -9,6 +9,10 @@ readme = "README.md"
 python = "^3.10"
 fastapi = "^0.110.0"
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4ff00fa (test2)
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.6.2"
 
@@ -17,6 +21,7 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.ruff]
+<<<<<<< HEAD
 select = ["ALL"]
 ignore = ["RUF001", "T201"]
 
@@ -26,3 +31,11 @@ exclude = [".git", ".ruff_cache"]
 
 line-length = 79
 target-version = "py310"
+=======
+select=["ALL"]
+unfixable=[]
+exclude=[".git", ".ruff_cache"]
+
+line-length=79
+target-version="py310"
+>>>>>>> 4ff00fa (test2)

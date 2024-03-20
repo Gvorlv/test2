@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 root = true
 
 [*.py]
@@ -8,3 +9,14 @@ trim_trailing_whitespace = true
 end_of_line = lf
 charset = utf-8
 max_line_length = 79
+=======
+root=true
+[*.py]
+indent_style=space
+indent_style=4
+insert_final_newline=true
+trim_trailing_whitespace=true
+end_of_line=lf
+charset=utf-8
+max_line_length=79
+>>>>>>> 4ff00fa (test2)
